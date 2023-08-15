@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semi-Circle Splide Carousel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .splide {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        margin: 0 auto;
+      }
+
+      .splide__track {
+        display: flex;
+        transform-origin: top center;
+        transform: rotate(-20deg);
+      }
+
+      .splide__slide {
+        flex: 0 0 auto;
+        width: 100px;
+        height: 100px;
+        margin: 0 10px;
+        background-color: #ccc;
+        border-radius: 50%;
+        transition: transform 0.3s;
+      }
+
+      .splide__slide.splide__slide--active {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">Item 1</li>
+          <li class="splide__slide">Item 2</li>
+          <li class="splide__slide">Item 3</li>
+          <li class="splide__slide">Item 4</li>
+          <li class="splide__slide">Item 5</li>
+          <li class="splide__slide">Item 6</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide(".splide", {
+          type: "carousel",
+          perPage: 3,
+          focus: "center",
+          gap: 10,
+          trimSpace: false,
+          drag: true,
+          pagination: false,
+          breakpoints: {
+            768: {
+              perPage: 1,
+            },
+          },
+        }).mount();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Cambon";
+  src: url(./Cambon.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: #242022;
+}
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.invisible {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+.splide {
+  width: 100%;
+  position: relative;
+  .header {
+    transition: all 300ms ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+
+    .head {
+      font-size: 4.8rem;
+      width: 100%;
+      text-transform: capitalize;
+      font-family: "Cambon";
+      color: beige;
+      font-weight: 100;
+      transition: all 300ms ease;
+    }
+    .subhead {
+      font-family: sans-serif;
+      color: beige;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+      display: flex;
+      font-weight: 100;
+      align-items: center;
+      justify-content: flex-start;
+      span {
+        display: inline-block;
+        width: 3.2rem;
+        border: 1px solid beige;
+      }
+    }
+  }
+
+  &__img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.4rem;
+    width: 100%;
+    text-align: center;
+    // padding: 1rem;
+    text-transform: capitalize;
+    font-family: "Cambon";
+    color: beige;
+    opacity: 0;
+    transition: all 300ms ease;
+  }
+  &__slide {
+    height: 60vh;
+    width: 45vh;
+    border-radius: 10000px;
+    overflow: hidden;
+
+    &.is-active {
+      .splide__img {
+        scale: 1.1;
+        transition: all 300ms ease;
+        filter: brightness(70%) blur(3px);
+        &-text {
+          opacity: 1;
+        }
+      }
+    }
+    .splide__img {
+      height: 100%;
+      width: 100%;
+      scale: 1.2;
+      transition: all 300ms ease;
+    }
+  }
+  &__arrow {
+    bottom: 0%;
+    width: 5vw;
+    height: 5vh;
+    border-radius: 10000px;
+    margin-top: calc(30vh + 3rem); //30vh is half height of the pill
+
+    &--prev {
+      left: calc(50% - 0.5rem - 5vw);
+      background-color: #242022;
+      border: 1px solid beige;
+      img {
+        rotate: 180deg;
+        height: 100%;
+        width: 100%;
+        padding: 0.5rem;
+      }
+    }
+    &--next {
+      right: calc(50% - 0.5rem - 5vw);
+      background-color: #242022;
+      border: 1px solid beige;
+      img {
+        height: 100%;
+        width: 100%;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

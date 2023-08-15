@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Cambon";
+  src: url(./Cambon.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: #242022;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.splide {
+  width: 100%;
+  position: relative;
+}
+.splide .header {
+  transition: all 300ms ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+}
+.splide .header .head {
+  font-size: 4.8rem;
+  width: 100%;
+  text-transform: capitalize;
+  font-family: "Cambon";
+  color: beige;
+  font-weight: 100;
+  transition: all 300ms ease;
+}
+.splide .header .subhead {
+  font-family: sans-serif;
+  color: beige;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  font-weight: 100;
+  align-items: center;
+  justify-content: flex-start;
+}
+.splide .header .subhead span {
+  display: inline-block;
+  width: 3.2rem;
+  border: 1px solid beige;
+}
+.splide__img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Cambon";
+  color: beige;
+  opacity: 0;
+  transition: all 300ms ease;
+}
+.splide__slide {
+  height: 60vh;
+  width: 45vh;
+  border-radius: 10000px;
+  overflow: hidden;
+}
+.splide__slide.is-active .splide__img {
+  scale: 1.1;
+  transition: all 300ms ease;
+  filter: brightness(70%) blur(3px);
+}
+.splide__slide.is-active .splide__img-text {
+  opacity: 1;
+}
+.splide__slide .splide__img {
+  height: 100%;
+  width: 100%;
+  scale: 1.2;
+  transition: all 300ms ease;
+}
+.splide__arrow {
+  bottom: 0%;
+  width: 5vw;
+  height: 5vh;
+  border-radius: 10000px;
+  margin-top: calc(30vh + 3rem);
+}
+.splide__arrow--prev {
+  left: calc(50% - 0.5rem - 5vw);
+  background-color: #242022;
+  border: 1px solid beige;
+}
+.splide__arrow--prev img {
+  rotate: 180deg;
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem;
+}
+.splide__arrow--next {
+  right: calc(50% - 0.5rem - 5vw);
+  background-color: #242022;
+  border: 1px solid beige;
+}
+.splide__arrow--next img {
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

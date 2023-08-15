@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awwwards Carousel Animation | DEVDEX</title>
+
+    <!-- splidejs -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+    <!-- js link -->
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="splide">
+        <div class="header">
+          <h1 class="head">our stories</h1>
+          <p class="subhead">
+            <span></span>&nbsp;&nbsp;meet some of the best of us.
+          </p>
+        </div>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <img src="./arrow.svg" alt="" />
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <img src="./arrow.svg" alt="" />
+          </button>
+        </div>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img class="splide__img" src="./1.webp" alt="" />
+              <span class="splide__img-text">
+                dance like <br /><i>weights lifted</i>
+              </span>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__img" src="./2.webp" alt="" />
+              <span class="splide__img-text">
+                strong and <br /><i>courageous</i>
+              </span>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__img" src="./3.webp" alt="" />
+              <span class="splide__img-text">
+                eight billion <br /><i>different ways</i>
+              </span>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__img" src="./4.webp" alt="" />
+              <span class="splide__img-text">
+                there's power <br /><i>inside me</i>
+              </span>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__img" src="./5.webp" alt="" />
+              <span class="splide__img-text">
+                do what<br /><i>you're afraid of</i>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
